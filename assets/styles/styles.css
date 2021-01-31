@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap");
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #252679;
+  min-height: 100vh;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  margin: 2rem 0;
+  color: #eee;
+}
+
+.container {
+  width: 60%;
+  margin: 2rem auto;
+  list-style: none;
+}
+
+.container .accordion-item {
+  background: #eee;
+  color: #484848;
+  margin: 1rem 0;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container .accordion-item .accordion-item-header {
+  padding: 0.5rem 3rem 0.5rem 1rem;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-weight: 600;
+  color: black;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.container .accordion-item .accordion-item-header:hover {
+  color: #252679;
+}
+
+.container .accordion-item .accordion-item-header::after {
+  content: '';
+  background: url(/assets/images/angle-down-solid.svg) no-repeat;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  right: 1rem;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.container .accordion-item .accordion-item-header.active::after {
+  content: '';
+  background: url(/assets/images/angle-up-solid.svg) no-repeat;
+}
+
+.container .accordion-item .accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: max-height .2s;
+  transition: max-height .2s;
+}
+
+.container .accordion-item .accordion-item-body .accordion-item-body-content {
+  padding: 1rem;
+  line-height: 1.5rem;
+  border-top: 1px solid;
+  -o-border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+     border-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(#34495e), to(transparent)) 1;
+     border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+}
+
+@media (min-width: 280px) and (max-width: 540px) {
+  .container {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
